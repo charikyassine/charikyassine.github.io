@@ -618,21 +618,21 @@
     </div>
     <div>
       <div class="form-title">Send a <em>message.</em></div>
-      <form class="contact-form" onsubmit="submitForm(event)">
+      <form class="contact-form" action="https://formspree.io/f/xykawpqz" method="POST">
         <div class="form-row">
-          <input type="text" class="form-input" placeholder="Your name *" required>
-          <input type="text" class="form-input" placeholder="Company">
+          <input type="text" name="name" class="form-input" placeholder="Your name *" required>
+          <input type="text" name="company" class="form-input" placeholder="Company">
         </div>
-        <input type="email" class="form-input" placeholder="Email address *" required>
-        <input type="tel" class="form-input" placeholder="WhatsApp / Phone">
-        <select class="form-input" style="cursor:pointer;">
+        <input type="email" name="email" class="form-input" placeholder="Email address *" required>
+        <input type="tel" name="phone" class="form-input" placeholder="WhatsApp / Phone">
+        <select name="interest" class="form-input" style="cursor:pointer;">
           <option value="" disabled selected>I am interested in...</option>
           <option>Market Entry Advisory</option>
           <option>Real Estate Investment</option>
           <option>Construction Consulting</option>
           <option>Other</option>
         </select>
-        <textarea class="form-input" placeholder="Tell me about your project or question..."></textarea>
+        <textarea name="message" class="form-input" placeholder="Tell me about your project or question..."></textarea>
         <button type="submit" class="form-submit">Send Message</button>
         <div class="form-success" id="form-success">✓ Message sent! I'll be in touch within 24 hours.</div>
       </form>
